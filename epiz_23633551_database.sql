@@ -69,7 +69,7 @@ CREATE TABLE `members` (
   `cr` varchar(20) NOT NULL DEFAULT 'no',
   `banned` varchar(255) NOT NULL DEFAULT 'No',
   `secret_info` int(10) NOT NULL,
-  `secret_answer` varchar(100) NOT NULL
+  `secret_answer` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
