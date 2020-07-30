@@ -60,14 +60,16 @@ CREATE TABLE `members` (
   `password` varchar(255) NOT NULL,
   `image` varchar(100) NOT NULL,
   `collegecode` varchar(10) NOT NULL,
-  `stream` varchar(10) NOT NULL,
+  `stream` varchar(25) NOT NULL,
   `roll` varchar(15) NOT NULL,
-  `gradyear` int(4) NOT NULL,
+  `gradyear` varchar(10) NOT NULL,
   `type` varchar(25) NOT NULL,
   `designation` varchar(255) NOT NULL,
   `idcard` varchar(255) NOT NULL,
   `cr` varchar(20) NOT NULL DEFAULT 'no',
-  `banned` varchar(255) NOT NULL DEFAULT 'No'
+  `banned` varchar(255) NOT NULL DEFAULT 'No',
+  `secret_info` int(10) NOT NULL,
+  `secret_answer` varchar(100) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
