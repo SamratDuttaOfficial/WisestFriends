@@ -13,6 +13,8 @@
         echo $row["firstname"]." ".$row["lastname"]."<br>";
         echo "Gender"." : ".$row["gender"]."<br>";
         echo "Address"." : ".$row["address"]."<br>";
+        echo "Class/Year"." : ".$row["gradyear"]."<br>";
+        echo "Stream"." : ".$row["stream"]."<br>";
         echo "Email"." : ".$row["email"]."<br>";
         echo "Contact No."." : ".$row["contact_no"]."<br>";
         echo "<span class='label label-info'>".$row["type"]."</span>";        
@@ -33,7 +35,8 @@
 				<textarea id="thin" style="margin-top: 10px;" name="content" maxlength="100" placeholder="Description"></textarea>
 				<br>        
         <small style="font-family:courier,'new courier';" class="text-muted">Your post can be seen by anyone from your college.</small><br>     
-				<input type="file" name="image" />
+				<input type="file" name="image" accept=".jpg, .jpeg, .png, .pdf" />
+        <br><small style="font-family:courier,'new courier';" class="text-muted"><b>Select JPG, JPEG or PNG file, lesser than 2MB or PDF file lesser than 25MB.</b></small>
         <input type="hidden" name="type" value="Official Post" />
         <? 
           if($session_type=="Student" || $session_type=="Unverified teacher")
@@ -43,7 +46,7 @@
         ?>
         <input type="hidden" name="status" value="<? echo $status ?>" />
         <input type="hidden" name="collegecode" value="<? echo $session_collegecode ?>" /><br>
-        <small style="font-family:courier,'new courier';" class="text-muted">Select the <b>Year of Graduation</b> for whom this post is relevant.</small><br>
+        <small style="font-family:courier,'new courier';" class="text-muted">Select the <b>Year/Class</b> for whom this post is relevant.</small><br>
         <select id="currency"  name="stream">
                     <option value="all">All Streams</option>
                     <?
@@ -53,12 +56,19 @@
         </select>        
         <select id="currency"  name="gradyear">
                     <option value="0">All</option>               
-                    <option>2019</option>
-                    <option>2020</option>
-                    <option>2021</option>
-                    <option>2022</option>
-                    <option>2023</option>
-                    <option>2024</option>
+                    <option>Class V</option>
+                    <option>Class VI</option>
+                    <option>Class VII</option>
+                    <option>Class VIII</option>
+                    <option>Class IX</option>
+                    <option>Class X</option>
+                    <option>Class XI</option>
+                    <option>Class XII</option>
+                    <option>First Year</option>
+                    <option>Second Year</option>
+                    <option>Third Year</option>
+                    <option>Fourth Year</option>
+                    <option>Fifth Year</option>
         </select>
 				<button type="submit" name="submit" class="btn btn-success"><i class="icon-share"></i> ADD </button>
 			 </form>

@@ -9,7 +9,10 @@
     <body>
 	<?php include('navbar.php'); ?>
 			<hr>
-      <center><img class="pp" src="<?php echo $profile_image; ?>" height="140" width="160"></center>
+      <center>
+        Your current ID Card picture:
+        <img class="pp" src="<?php echo $profile_idcard_image; ?>" height="140" width="160">
+      </center>
      <hr>
         
       <?php
@@ -19,12 +22,12 @@
   ?>
 
   <center>
-    To change the Profile Picture, select an image of JPG or PNG format (size lesser than 2MB).
+    To change the ID Card picture, select an image of JPG or PNG format (size lesser than 2MB).
       <hr>
-<form method="post" action="save_dp.php" enctype="multipart/form-data">
+<form method="post" action="save_idcard.php" enctype="multipart/form-data">
   <input type="hidden" name="member_id" value="<?php echo $id; ?>">
-  <input type="file" name="image" required="required" accept=".jpg, .jpeg, .png"/>
-            <button type="submit" name="submit" class="btn btn-success">Change Profile Picture </button>
+  <input type="file" name="image" required="required" />
+            <button type="submit" name="submit" class="btn btn-success">Change ID Card Picture </button>
       </form>
       </center>
 

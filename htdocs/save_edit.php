@@ -8,10 +8,11 @@ $gender = htmlspecialchars($_POST['gender']);
 $address = htmlspecialchars($_POST['address']);
 $email = htmlspecialchars($_POST['email']);
 $contact_no = htmlspecialchars($_POST['contact_no']);
-
+$gradyear = htmlspecialchars($_POST['gradyear']);
+$stream = htmlspecialchars($_POST['stream']);
  
 
-$conn->query("update members set firstname = '$firstname',lastname='$lastname',gender='$gender',address='$address',email='$email',contact_no='$contact_no' where member_id = '$member_id'
+$conn->query("update members set firstname = '$firstname',lastname='$lastname',gender='$gender',address='$address',email='$email',contact_no='$contact_no',gradyear='$gradyear',stream='$stream' where member_id = '$member_id'
 ");
 
 

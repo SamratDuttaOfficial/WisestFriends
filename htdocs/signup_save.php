@@ -21,12 +21,20 @@ $collegecode = htmlspecialchars($_POST['collegecode']);
 $stream = htmlspecialchars($_POST['stream']);
 $roll = htmlspecialchars($_POST['roll']);
 $gradyear = htmlspecialchars($_POST['gradyear']);
+$secret_info = htmlspecialchars($_POST['secret_info']);
+$secret_ans = htmlspecialchars($_POST['secret_answer']);
 $pass1 = hash('sha384', $pass);
 $pass2 = hash('sha256', $pass1);
 $pass3 = hash('md5', $pass2);
 $pass4 = hash('snefru', $pass3);
 $pass5 = hash('crc32', $pass4);
 $password = hash('sha512', $pass5);
+$secret_ans1 = hash('sha256', $secret_ans);
+$secret_ans2 = hash('sha384', $secret_ans1);
+$secret_ans3 = hash('snefru', $secret_ans2);
+$secret_ans4 = hash('md5', $secret_ans3);
+$secret_ans5 = hash('sha512', $secret_ans4);
+$secret_answer = hash('crc32', $secret_ans5);
 $type = htmlspecialchars($_POST['type']);
 
 $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
@@ -49,7 +57,7 @@ $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
           }
         }
         else{
-            echo "The image size must me lesser than 2MB.";
+            echo "<h4><font color='white'>The image size must me lesser than 2MB.</font></h4>";
             echo "<button onclick='goBack()' type='button' class='btn btn-primary active'> Go Back </button>"; 
                   echo "<script>";
                   echo "function goBack() {";
@@ -79,7 +87,7 @@ if(!empty($_POST["name"])) {
             </script>";
   }  
   else if($user_count_rollcheck>0) {
-      echo "<h4><font color='white'>Someone from your college with this roll number is already signed up. Please contact your respective college faculty with this issue.</text></h4>
+      echo "<h4><font color='white'>Someone from your college/school with this roll number is already signed up. Please contact your respective college faculty with this issue.</text></h4>
             <button onclick='goBack()' type='button' class='btn btn-primary active'> Roll Unavailable. Go Back </button> 
             <script>
             function goBack() {
@@ -89,7 +97,7 @@ if(!empty($_POST["name"])) {
   }
   else{
 
-$conn->query("insert into members (username,password,firstname,lastname,gender,image,email,collegecode,stream,roll,gradyear,type,idcard) values ('$username','$password','$firstname','$lastname','$gender','images/No_Photo_Available.jpg','$email','$collegecode','$stream','$roll','$gradyear','$type','$location')");	
+$conn->query("insert into members (username,password,firstname,lastname,gender,image,email,collegecode,stream,roll,gradyear,type,idcard,secret_info,secret_answer) values ('$username','$password','$firstname','$lastname','$gender','images/No_Photo_Available.jpg','$email','$collegecode','$stream','$roll','$gradyear','$type','$location','$secret_info','$secret_answer')");	
 
 
 ?>

@@ -1,5 +1,11 @@
 <?php include('header.php'); ?>    
-<?php include('session.php'); ?>    
+<?php include('session.php'); ?> 
+  
+<?
+  if($session_type=="Guest")
+  header('location:guesterror.php');
+?>
+
 <body>
 	<?php include('navbar.php'); ?>
 	<div id="masthead">  
@@ -11,6 +17,10 @@
 					<hr>
 					<center>
 						<a class="btn btn-success" href="change_pic.php">Change Profile Picture</a>
+					</center>
+					<br>
+					<center>
+						<a class="btn btn-success" href="change_idcard.php">Add/Change ID Card Picture</a>
 					</center>
       			</div>
 				<div class="col-md-4">
@@ -40,6 +50,40 @@
 						Email: <div class="pull-right"><input name="email" type="text" maxlength="100" value="<?php echo $row['email']; ?>"></div>
 						<hr>
 						Contact No. : <div class="pull-right"><input name="contact_no" maxlength="13" type="text" value="<?php echo $row['contact_no']; ?>"></div>
+						<hr>
+						Class/Year : 
+						<div class="pull-right">
+							<select name="gradyear">
+								<option><?php echo $row['gradyear']; ?></option>
+								<option>Class V</option>
+                                <option>Class VI</option>
+                                <option>Class VII</option>
+                                <option>Class VIII</option>
+                                <option>Class IX</option>
+                                <option>Class X</option>
+                                <option>Class XI</option>
+                                <option>Class XII</option>
+                                <option>First Year</option>
+                                <option>Second Year</option>
+                                <option>Third Year</option>
+                                <option>Fourth Year</option>
+                                <option>Fifth Year</option>
+							</select>
+						</div>
+						<hr>
+						Stream : 
+						<div class="pull-right">
+							<select name="stream">
+								<option><?php echo $row['stream']; ?></option>
+								<option>School Curriculum</option>
+                                <option>CSE</option>
+                                <option>ECE</option>
+                                <option>CE</option>
+                                <option>EE</option>
+                                <option>ME</option>
+                                <option>IT</option>
+							</select>
+						</div>
 						<hr>
 						<br>
 						<center>

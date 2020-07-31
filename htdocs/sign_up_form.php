@@ -33,26 +33,44 @@
 									</select>
                                 </p>
                                 <p> 
-                                    <label for="passwordsignup" class="youpasswd" data-icon="u">Your College Code </label>
-                                    <input id="passwordsignup" name="collegecode" required="required" type="text" placeholder="College Code" maxlength="10" />
+                                    <label for="passwordsignup" class="youpasswd" data-icon="u">Your Institution Code </label>
+                                    <select id="passwordsignup"  name="collegecode" required="required">
+                                        <option>BCREC120</option>
+                                        <option>BMHSWB</option>
+                                    </select>
                                 </p>
                                 <p> 
                                     <label for="passwordsignup" class="youpasswd" data-icon="u">Your Stream </label>
-                                    <input id="passwordsignup" name="stream" required="required" type="text" placeholder="Stream" maxlength="10" />
+                                    <select id="passwordsignup"  name="stream" required="required">
+                                        <option>School Curriculum</option>
+                                        <option>CSE</option>
+                                        <option>ECE</option>
+                                        <option>CE</option>
+                                        <option>EE</option>
+                                        <option>ME</option>
+                                        <option>IT</option>
+                                    </select>
                                 </p>
                                 <p> 
                                     <label for="passwordsignup" class="youpasswd" data-icon="u">Your Roll Number </label>
                                     <input id="passwordsignup" name="roll" required="required" type="Number" placeholder="Roll Number" maxlength="15" />
                                 </p>
                                 <p> 
-                                    <label for="passwordsignup" class="youpasswd" data-icon="">Your Year of Graduation </label>
+                                    <label for="passwordsignup" class="youpasswd" data-icon="">Your Class/Year </label>
                                     <select id="passwordsignup"  name="gradyear" required="required">
-                                        <option>2019</option>
-                                        <option>2020</option>
-                                        <option>2021</option>
-                                        <option>2022</option>
-                                        <option>2023</option>
-                                        <option>2024</option>
+                                        <option>Class V</option>
+                                        <option>Class VI</option>
+                                        <option>Class VII</option>
+                                        <option>Class VIII</option>
+                                        <option>Class IX</option>
+                                        <option>Class X</option>
+                                        <option>Class XI</option>
+                                        <option>Class XII</option>
+                                        <option>First Year</option>
+                                        <option>Second Year</option>
+                                        <option>Third Year</option>
+                                        <option>Fourth Year</option>
+                                        <option>Fifth Year</option>
                                     </select>
                                 </p>
                                 <p> 
@@ -63,7 +81,19 @@
                                 </p>
                                 <p> 
                                     <label class="youpasswd" data-icon="u">Your ID Card Photo </label>
-                                    <input type="file" name="image" />
+                                    <input type="file" name="image" required="required" />
+                                    <br><small style="font-family:courier,'new courier';" class="text-muted">Your ID Card photo must be of JPG or PNG format, lesser than 2MB. </small>
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" data-icon="">Secret Info (for password recovery) </label>
+                                    <select id="passwordsignup"  name="secret_info" required="required">
+                                        <option value="0">Your dog's name</option>
+                                        <option value="1">Your mother's maiden name</option>
+                                        <option value="2">Name of the city you were born in</option>
+                                        <option value="3">Your nickname</option>
+                                    </select>
+                                    <input id="passwordsignup" name="secret_answer" required="required" type="text" placeholder="Enter your answer here" maxlength="25" />
+                                    <br><small style="font-family:courier,'new courier';" class="text-muted">This field is case sensitive. Take care of uppercase and lowercase letters. </small>
                                 </p>
                                 <small style="font-family:courier,'new courier';" class="text-muted">Caution: By clicking 'SIGN UP' you are accepting all the <u><a href="tos.txt">Terms of services</a></u> and <u><a href="privacypolicy.htm"> Privacy policies</a></u> of <nobr>'Wisest Friends'.</nobr></small>              
                                 <p class="signin button"> 

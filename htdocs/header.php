@@ -15,5 +15,4 @@ include('session.php');
 		<link href="css/font-awesome.css" type="text/css" rel="stylesheet">
         <link href="css/buttons.css" type="text/css" rel="stylesheet">
         <link href="css/navbar_css.css" type="text/css" rel="stylesheet">
-        <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/fb673c7ae78f730ec2682905c40f0241_1.js" async></script>  
-	</head>
+    </head>

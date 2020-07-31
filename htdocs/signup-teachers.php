@@ -45,15 +45,24 @@
                                     </select>
                                 </p>
                                 <p> 
-                                    <label for="passwordsignup" class="youpasswd" data-icon="u">Your College Code </label>
-                                    <input id="passwordsignup" name="collegecode" required="required" type="text" placeholder="College Code" maxlength="10" />
+                                    <label for="passwordsignup" class="youpasswd" data-icon="u">Your Institution Code </label>
+                                    <select id="passwordsignup"  name="collegecode" required="required">
+                                        <option>BCREC120</option>
+                                        <option>BMHSWB</option>
+                                    </select>
                                 </p>
                                 <p> 
-                                    <label for="passwordsignup" class="youpasswd" data-icon="u">Your Department </label>                                    
-                                    <input id="passwordsignup" name="stream" required="required" type="text" placeholder="Stream" maxlength="10" />
-                                </p>
-                                <p>
-                                    <small style="font-family:courier,'new courier';" class="text-muted">You can write "all" in small letters in case you don't have a specific department.</small>
+                                    <label for="passwordsignup" class="youpasswd" data-icon="u">Your Stream </label>
+                                    <select id="passwordsignup"  name="stream" required="required">
+                                        <option>School Curriculum</option>
+                                        <option>CSE</option>
+                                        <option>ECE</option>
+                                        <option>CE</option>
+                                        <option>EE</option>
+                                        <option>ME</option>
+                                        <option>IT</option>
+                                        <option value="all">Nothing Particular</option>
+                                    </select>
                                 </p>
                                 <p> 
                                     <label for="passwordsignup" class="youpasswd" data-icon="u">Your ID Number (if any) </label>
@@ -66,7 +75,17 @@
                                 </p>
                                 <p> 
                                     <label for="passwordsignup" class="youpasswd" data-icon="u">Your ID Proof </label>
-                                    <input type="file" name="idcard_image" />
+                                    <input type="file" name="idcard_image" required="required" />
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" data-icon="">Secret Info (for password recovery) </label>
+                                    <select id="passwordsignup"  name="secret_info" required="required">
+                                        <option value="0">Your dog's name</option>
+                                        <option value="1">Your mother's maiden name</option>
+                                        <option value="2">Name of the city you were born in</option>
+                                        <option value="3">Your nickname</option>
+                                    </select>
+                                    <input id="passwordsignup" name="secret_answer" required="required" type="text" placeholder="Enter your answer here" maxlength="25" />
                                 </p>
                                 <small style="font-family:courier,'new courier';" class="text-muted">Caution: By clicking 'SIGN UP' you are accepting all the <u><a href="tos.txt">Terms of services</a></u> and <u><a href="privacypolicy.htm"> Privacy policies</a></u> of <nobr>'Wisest Friends'.</nobr></small>              
                                 <p class="signin button"> 

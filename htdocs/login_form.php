@@ -14,9 +14,13 @@
                                     <input type="submit" name="login" value="Login" /> 
 								</p>
                                 <p>
-									Don't have an account yet ?
+									Don't have an account yet?
                                 <br>    
 									<a href="#toregister" class="to_register">Create Account</a>                                  
+                                </p>
+                                <p>
+                                    Can't log in?    
+                                    <a href="reset_password.php" class="to_register">Reset Password</a>                                  
                                 </p>
                                 </form>
                             

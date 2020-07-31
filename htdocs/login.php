@@ -1,4 +1,5 @@
 <?php ob_start(); ?>
+<?php include('index_header.php'); ?>
 <?php
 include('dbcon.php');
 
@@ -25,6 +26,12 @@ session_start();
 $_SESSION['id'] = $row['member_id'];
  header('location:home.php'); 
 }else{
- header('location:index.php'); 
+ 	echo "<h4><font color='white'>Wrong Credentials.</font></h4>";
+	echo "<button onclick='goBack()' type='button' class='btn btn-primary active'> Go Back </button>"; 
+    echo "<script>";
+    echo "function goBack() {";
+    echo "window.location ='index.php'";
+    echo "}";
+    echo "</script>"; 
 }
 ?>

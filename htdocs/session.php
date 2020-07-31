@@ -10,6 +10,7 @@ $user_row = $session_query->fetch();
 $username = $user_row['firstname']." ".$user_row['lastname'];
 $uname = $user_row['username'];
 $profile_image = $user_row['image'];
+$profile_idcard_image = $user_row['idcard'];
 $session_collegecode = $user_row['collegecode'];
 $session_gradyear = $user_row['gradyear'];
 $session_stream = $user_row['stream'];

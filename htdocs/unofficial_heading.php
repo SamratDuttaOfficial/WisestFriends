@@ -12,7 +12,9 @@
         echo "<h3><b>".$row["shopname"]."</h3></b>";
         echo $row["firstname"]." ".$row["lastname"]."<br>";
         echo "Gender"." : ".$row["gender"]."<br>";
-        echo "Address"." : ".$row["address"]."<br>"; 
+        echo "Address"." : ".$row["address"]."<br>";
+        echo "Class/Year"." : ".$row["gradyear"]."<br>";
+        echo "Stream"." : ".$row["stream"]."<br>"; 
         echo "Email"." : ".$row["email"]."<br>";
         echo "Contact No."." : ".$row["contact_no"]."<br>";
         echo "Mobile No."." : ".$row["mobile"]."<br>";
@@ -24,7 +26,7 @@
         <textarea id="thin" name="title" maxlength="100" placeholder="Title" required="required"></textarea>
         <br>        
 				<textarea id="thin" style="margin-top: 10px;" name="content" maxlength="100" placeholder="Description"></textarea>
-				<input type="file" name="image" />
+				<input type="file" name="image" accept=".jpg, .jpeg, .png"/>
                 <input type="hidden" name="type" value="Unofficial" />
                 <input type="hidden" name="status" value="Approved" />
                 <input type="hidden" name="collegecode" value="<? echo $session_collegecode ?>" />
@@ -34,7 +36,7 @@
         </select>
         <select id="currency"  name="gradyear">               
                     <option value="0">For Everyone</option>
-                    <option value="<? echo $session_gradyear ?>">For my year students only</option>
+                    <option value="<? echo $session_gradyear ?>">For students in my Year/Class only</option>
         </select>
 				<button type="submit" name="submit" class="btn btn-success"><i class="icon-share"></i> ADD </button>
 			 </form>

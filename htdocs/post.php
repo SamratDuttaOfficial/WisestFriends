@@ -1,7 +1,13 @@
 <?php ob_start(); ?>
+<?php include('index_header.php'); ?>
 <?php
 include('dbcon.php');
 include('session.php');
+
+if($session_type=="Guest"){
+  header('location:guesterror.php');
+  exit();
+}
 
 function clean($string) {
    $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
@@ -39,16 +45,7 @@ if (isset($_POST['submit'])) {
 						$location = htmlspecialchars("/upload/" . $uniquesavename . $image_name);
 						$photo=1; //1 for photo
 					}
-				}
-				else{
-						echo "The image size must me lesser than 2MB.";
-						echo "<button onclick='goBack()' type='button' class='btn btn-primary active'> Go Back </button>"; 
-            			echo "<script>";
-            			echo "function goBack() {";
-            			echo "window.location =". $_SERVER['HTTP_REFERER'];
-            			echo "}";
-            			echo "</script>";
-				}
+				}				
       	}
       	if(in_array($file_ext,$extensionspdf)=== true){
       		if ($file_type=="application/pdf"){
@@ -56,16 +53,7 @@ if (isset($_POST['submit'])) {
         			move_uploaded_file($_FILES["image"]["tmp_name"], "upload/" . $uniquesavename . $image_name);
 					$location = htmlspecialchars("/upload/" . $uniquesavename . $image_name);
 					$photo=2; //2 for pdfs
-				}
-				else{
-					echo "The PDF size must me lesser than 20MB.";
-					echo "<button onclick='goBack()' type='button' class='btn btn-primary active'> Go Back </button>"; 
-            		echo "<script>";
-            		echo "function goLogin() {";
-            		echo "window.location =". $_SERVER['HTTP_REFERER'];
-            		echo "}";
-            		echo "</script>";
-				}
+				}				
 			}			
       	}        
  
