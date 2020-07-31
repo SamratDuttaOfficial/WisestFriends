@@ -12,12 +12,7 @@ function clean($string) {
 
 $username = clean(htmlspecialchars($_POST['username']));
 $pass = htmlspecialchars($_POST['password']);
-$pass1 = hash('sha384', $pass);
-$pass2 = hash('sha256', $pass1);
-$pass3 = hash('md5', $pass2);
-$pass4 = hash('snefru', $pass3);
-$pass5 = hash('crc32', $pass4);
-$password = hash('sha512', $pass5);
+$password = hash('sha256', $pass);
 $query = $conn->query("select * from members where username = '$username' and password = '$password'");
 $count = $query->rowcount();
 $row = $query->fetch();
